@@ -34,6 +34,7 @@ type Client struct {
 
 	// Services used for accessing different parts of the Solder
 	// API.
+	Mod *ModService
 	Modpack *ModpackService
 }
 
@@ -54,6 +55,7 @@ func NewClient(httpClient *http.Client) *Client {
 		BaseURL: baseURL,
 		UserAgent: defaultUserAgent,
 	}
+	c.Mod = &ModService{client: c}
 	c.Modpack = &ModpackService{client: c}
 	return c
 }
