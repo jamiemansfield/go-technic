@@ -18,4 +18,14 @@ type Modpack struct {
 
 	// Solder
 	Solder string `json:"solder"`
+
+	// Images
+	Icon *Image `json:"icon"`
+	Logo *Image `json:"logo"`
+	Background *Image `json:"background"`
+}
+
+type Image struct {
+	URL string `json:"url"`
+	Md5 string `json:"md5"`
 }
