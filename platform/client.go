@@ -13,7 +13,7 @@ import (
 var (
 	defaultBaseURL   = "https://api.technicpack.net/"
 	defaultUserAgent = "go-technic"
-	defaultBuild     = "534"
+	defaultBuild     = "go-technic"
 )
 
 // A client manages communication with a Solder API, defaulting to
